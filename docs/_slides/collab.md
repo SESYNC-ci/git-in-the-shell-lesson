@@ -25,7 +25,7 @@ Note, version control works really well with text. Non-textual components of you
 
 ## Create a new file
 
-Create a new text file in the RStudio editor as below, adding yourself as the first collaborator.
+Create a new text file as below, adding yourself as the first collaborator.
 
 ~~~
 ## Project Collaborators
@@ -43,27 +43,25 @@ Our aim is to let your project collaborator replace "My neighbor!" with his or h
 
 Before you can commit changes involving a new file, you have to tell the version control system (that's `git`!) to watch it..
 
-1. Go to the `git` tab in RStudio
-1. Select `commit` to open the "Review Changes" window
-1. Select "Staged" to add (hence "A") the new file.
-1. Enter a descriptive message about the commit.
-1. Commit!
+```bash
+git add collaborators.md
+git commit -m 'just me so far!'
+```
+{:.input}
 
 ===
 
 ## Push
 
-Look at the `git` tab again and notice that your branch is ahead of origin/master! Push those commit(s) to your GitHub repo.
+Look at the `git status` and notice that your branch is ahead of origin/master! Push those commit(s) to your GitHub repo.
 
 ===
 
-## Exercise 1
-
-Modify the `collaborators.md` file again to add a third "TBD" collaborator, and push the modification to the origin as one commit.
-
-===
+## Collaborate!
 
 The first step to collaborative workflows is granting access to the **origin** of your project. Introduce yourself to your neighbor, and ask for his/her GitHub username.
+
+===
 
 ![]({{ site.baseurl }}/images/repo_collab.png)
 {:.captioned}
@@ -72,23 +70,28 @@ Add your neighbor as a collaborator, and accept your neighbor's invitation to co
 
 ===
 
-## Editing on GitHub
+As a collaborator on your neighbors repository, you have permission to edit their `collaborators.md`.
 
-Go to your neighbors repository on GitHub, and open `collaborators.md`. The text below shows "My Neighbor!" where you should see your neighbor's name. Edit the file in your neighbor's repo, by replacing the remaining "My neighbor!" with your own name.
+The text below shows "My Neighbor!" where you should see your neighbor's name. Edit the file in your neighbor's repo, by replacing the remaining "My neighbor!" with your own name.
+{:.notes}
 
 ~~~
 ## Project Collaborators
 
 - My neighbor!
 - ...
-- TBD
 ~~~
 {:.text-document title="collaborators.md"}
 
-Always write a meaningful commit message when you save!
+Write a meaningful commit message to save your work.
 
 ===
 
-## Exercise 2
+## Integrate your Collaborator's work
 
-Create a new RStudio project from your neighbor's repository. Note the name you choose during project creation in RStudio does not have to be "handouts", i.e. it does not have to match the name of the repository on GitHub. Make further changes to the `collaborators.md` file, then commit & push.
+If you have no uncommited work in your tracked files, you can pull down the new commit from your neighbor and "fast-forward" your project.
+
+```bash
+git pull
+```
+{:.input}

@@ -1,22 +1,20 @@
 ---
 ---
 
-## Get Started with GitHub
+## Create a GitHub Repository
 
-Sign in or create a GitHub account.
+1. Sign in or create a GitHub account.
+
+2. Create a new repository on your GitHub page.
 
 ===
 
-## Create a GitHub repository
-
-Create a new repository on your GitHub page.
-
-![]({{ site.baseurl }}/images/new_repo-1.png){:width="60%"}  
+![]({{ site.baseurl }}/images/new_repo-1.png){:width="40%"}  
 {:.captioned}
 
-1. Name the repository "handouts".
-1. Add a short "tag line" for your Summer Institute experience.
-1. Leave all the boxes (includeing the "README") un-checked.
+1. Give the repo a name
+1. Add a short "tag line" to jog your memory
+1. Leave the boxes (including the "README") un-checked
 
 ===
 
@@ -26,9 +24,52 @@ You have created an empty repository. The quick start information provides clues
 
 ===
 
-## Imported repository
+## Configure your clone
 
-Or choose to import an existing repository, which already has a history of commits.
+To push and pull from your local repo to GitHub, you must specify the URL of the remote repo. By convention, we call the remote repo the "origin".
 
-![]({{ site.baseurl }}/images/import_repo.png){:width="60%"}  
-{:.captioned}
+===
+
+~~~
+git remote add origin ...
+~~~
+{:.input}
+
+===
+
+Push your commit up to the **origin**.
+
+~~~
+git push
+~~~
+{:.input}
+
+~~~
+Username for 'https://github.com': %username%
+Password for 'https://%username%@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 353 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/itcarroll/test.git
+   %hash%..%hash%  master -> master
+~~~
+{:.output}
+
+===
+
+Go check out your README.md on GitHub!
+
+===
+
+## GitHub Editor
+
+The online editor is good for quick-n-easy fixes, and for working on documentation. Its a bad place to modify code, because it's not tested before reaching the origin.
+
+===
+
+~~~bash
+git pull
+~~~
+{:.input}

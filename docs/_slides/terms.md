@@ -15,7 +15,7 @@ Open up the [repository](https://github.com/SESYNC-ci/handouts){:target="_blank"
 
 ## Centralized Workflow
 
-![]({{ site.baseurl }}/images/atlassian_workflow.svg){:width="50%"}  
+![]({{ site.baseurl }}/images/atlassian_workflow.svg){:width="70%"}  
 *[Image][comparing-workflows] by Atlassian / [CC BY]*
 {:.captioned}
 
@@ -23,7 +23,7 @@ The **origin** is the central repository, in this case it lives on GitHub. Every
 
 ===
 
-![]({{ site.baseurl }}/images/atlassian_pull.svg){:width="50%"}  
+![]({{ site.baseurl }}/images/atlassian_pull.svg){:width="60%"}  
 *[Image][comparing-workflows] by Atlassian / [CC BY]*
 {:.captioned}
 
@@ -35,7 +35,7 @@ A commit is a unit of work: any collection of changes to one or more files in th
 A versioned project is like a tree of commits, although the current tree has just one **branch**.
 After a worker creates a **clone**, the local copy is in the same place as the **origin**.
 
-![]({{ site.baseurl }}/images/atlassian_clone.png){:width="30%" style="border: none; box-shadow: none;"}  
+![]({{ site.baseurl }}/images/atlassian_clone.png){:width="40%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
 {:.captioned}
 
@@ -43,7 +43,7 @@ After a worker creates a **clone**, the local copy is in the same place as the *
 
 A **pull**, or initially a **clone**, applies commits copied from the **origin** to your local repo, syncing them up.
 
-![]({{ site.baseurl }}/images/atlassian_after_pull_top.png){:width="40%" style="border: none; box-shadow: none;"}  
+![]({{ site.baseurl }}/images/atlassian_after_pull_top.png){:width="60%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
 {:.captioned}
 
@@ -51,7 +51,7 @@ A **pull**, or initially a **clone**, applies commits copied from the **origin**
 
 A **pull**, or initially a **clone**, applies commits copied from the **origin** to your local repo, syncing them up.
 
-![]({{ site.baseurl }}/images/atlassian_after_pull_bottom.png){:width="40%" style="border: none; box-shadow: none;"}  
+![]({{ site.baseurl }}/images/atlassian_after_pull_bottom.png){:width="60%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
 {:.captioned}
 
@@ -59,7 +59,7 @@ A **pull**, or initially a **clone**, applies commits copied from the **origin**
 
 A **push** copies local commits to the **origin** and applies them remotely.
 
-![]({{ site.baseurl }}/images/atlassian_after_push_top.png){:width="40%" style="border: none; box-shadow: none;"}  
+![]({{ site.baseurl }}/images/atlassian_after_push_top.png){:width="70%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
 {:.captioned}
 
@@ -67,7 +67,7 @@ A **push** copies local commits to the **origin** and applies them remotely.
 
 A **push** copies local commits to the **origin** and applies them remotely.
 
-![]({{ site.baseurl }}/images/atlassian_after_push_bottom.png){:width="40%" style="border: none; box-shadow: none;"}  
+![]({{ site.baseurl }}/images/atlassian_after_push_bottom.png){:width="70%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
 {:.captioned}
 

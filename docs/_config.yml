@@ -1,11 +1,10 @@
 # Site
 
-title: Collaborative Workflows & Reproducible Pipelines
+title: git and More Tools in the Shell
 handouts:
-  - worksheet.sh
-  - worksheet.R
-tag: v0.1
-lesson: 1
+  - worksheet.ipynb
+tag: v0.2
+lesson: 5
 instructor: Ian Carroll
 authors:
   - Ian Carroll
@@ -13,13 +12,12 @@ authors:
 # Slides
 
 slide_sorter:
-  - goals
   - intro
-  - reproducible
-  - workflows
+  - goals
+  - git
   - terms
   - repo
-  - config
+  - merge
   - paths
   - collab
   - conclude
