@@ -62,7 +62,7 @@ Take a look at the repository on GitHub.
 
 - `README.md` is a Markdown file giving basic information about the repository.
 - There is a list of files, including a folder for data.
-- You are looking at a branch called `master`.
+- You are looking at a branch called "master".
 - The commit history is available from the top bar.
 - The "Clone or download" button provides a URL.
 
@@ -70,11 +70,4 @@ Take a look at the repository on GitHub.
 
 ## GitHub Editor
 
-The online editor is good for quick-n-easy fixes, and for working on documentation. Its a bad place to modify code, because it's not tested before reaching the origin.
-
-===
-
-~~~bash
-git pull
-~~~
-{:.input}
+The online editor is good for quick-n-easy fixes, and for working on documentation. Its a bad place to modify code, because it's not tested before reaching the origin. Nevertheless ... try it out on README.md.

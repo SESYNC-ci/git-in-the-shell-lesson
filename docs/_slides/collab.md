@@ -9,7 +9,7 @@ True collaboration goes deeper than commenting on a final report, but integrated
 - Will a teammate's work overwrite any of your own?
 - How do I recover the working version of code the PI broke?
 
-Centralized workflows, managed by `git`, helps answer these questions.
+Centralized workflows, managed by `git`, help solve these challenges.
 
 ===
 
@@ -19,7 +19,8 @@ Centralized workflows, managed by `git`, helps answer these questions.
 - Diverging files are easily reintegrated with a **merge** algorithm.
 - The complete project history is available to **checkout**.
 
-Note, version control works really well with text. Non-textual components of your project (e.g. large or binary data) rarely live in a repository.
+Note, version control works really well with text. Non-textual components of your project (e.g. large or binary data) rarely live in a repository. Use cloud storage for more static files and a database for dynamic records.
+{:.notes}
 
 ===
 
