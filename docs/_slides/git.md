@@ -3,14 +3,16 @@
 
 ## Git in the Shell
 
-The namesake of GitHub is the command-line-utility `git`. It performs
+The namesake of GitHub is the command-line utility `git`. It performs
 the clone, push, pull, and merge procedures just mentioned, and many
 more.
 
 ===
 
+The software has no GUI of it's own, and works through commands always beginning with "git " given in the shell. The comamnd to turn the "current folder" into a git repo is:
+
 ~~~bash
-git init .
+git init
 ~~~
 {:.input}
 
@@ -22,11 +24,33 @@ Commit your changes with a descriptive but short commit message.
 
 ===
 
-Add paths to git's watchlist, and then commit the current "version"
-to your project's long history.
+Add files to git's watchlist with the "add" command
 
 ~~~bash
 git add README.md
+git status
+~~~
+{:.input}
+
+~~~bash
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+
+Untracked files:
+~~~
+{:.output}
+
+===
+
+"Commit" updates the added files in a newly labeled version of your project's history.
+
+~~~bash
 git commit -m "initial commit"
 ~~~
 {:.input}
@@ -48,10 +72,9 @@ fatal: empty ident name (for <(null)>) not allowed
 
 ===
 
-Every commit needs an author. Follow git's instructions, using a real email address so your
-commits can be associated with your GitHub account, a bit later on.
-
-===
+Every commit needs an author. Follow git's instructions, using a
+real email address so your commits can be associated with your
+GitHub account, and try again.
 
 ~~~bash
 git commit -m "initial commit"
@@ -59,7 +82,7 @@ git commit -m "initial commit"
 {:.input}
 
 ~~~bash
-[master (root-commit) 248b03e] initial commit
+[master (root-commit) <sha>] initial commit
  1 file changed, 10 insertions(+)
  create mode 100755 README.md
 ~~~
@@ -93,7 +116,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ## Checkout the Log
 
-Version control gives you access to the state of the repository at any commit. To view the history, look at the log.
+Version control gives you access to the state of the repository at any previous commit. View this history in the log.
 
 ~~~
 git log
@@ -101,18 +124,11 @@ git log
 {:.input}
 
 ~~~
-commit 0517b3b2258e6cce76770646f175dc8abfe9e148
-Merge: 8612809 26c2dcd
-Author: Ian Carroll <icarroll@sesync.org>
-Date:   Tue Jul 26 14:53:22 2016 -0400
+commit <sha>
+Author: <author>
+Date:   <datetime>
 
-    Merge branch 'master' of https://github.com/itcarroll/test
-	
-commit 8612809b6eeea263a853783cf4c37a6862a31d22
-Author: Ian Carroll <icarroll@sesync.org>
-Date:   Tue Jul 26 13:48:57 2016 -0400
-
-    amazing
+    initial commit
 ~~~
 {:.output}
 
@@ -134,34 +150,27 @@ git show
 {:.input}
 
 ~~~
-commit 8612809b6eeea263a853783cf4c37a6862a31d22
-Author: Ian Carroll <icarroll@sesync.org>
-Date:   Fri Jun 24 13:48:57 2016 -0400
+commit <sha>
+Author: <author>
+Date:   <datetime>
 
-    amazing
-	
-diff --git a/README.md b/README.md
-index 521cb5d..24a865d 100644
---- a/README.md
-+++ b/README.md
-@@ -1,4 +1,4 @@
--# Welcome to My Project
-+# Welcome to My Amazing Project
+    <message>
 
-This project does the following:
- + nothing
+<diff>
 ~~~
 {:.output}
 
 ===
 
+The <sha>, even just the first few digits at this stage, are unique to each commit. Use "revert" to undo the changes introduced in a specified commit.
+
 ~~~
-git revert --no-edit 8612
+git revert --no-edit <sha>
 ~~~
 {:.input}
 
 ~~~
-[master b0aaef0] Revert "amazing"
+[master <sha>] Revert <message>
  1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
 {:.output}

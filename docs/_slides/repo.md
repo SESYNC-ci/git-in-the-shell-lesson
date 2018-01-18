@@ -9,7 +9,7 @@
 
 ===
 
-![]({{ site.baseurl }}/images/new_repo-1.png){:width="40%"}  
+![]({{ site.baseurl }}/images/new_repo-1.png){:width="50%"}  
 {:.captioned}
 
 1. Give the repo a name
@@ -26,12 +26,10 @@ You have created an empty repository. The quick start information provides clues
 
 ## Configure your clone
 
-To push and pull from your local repo to GitHub, you must specify the URL of the remote repo. By convention, we call the remote repo the "origin".
-
-===
+To push and pull from your local repo to GitHub, you must configure your local repo with the URL of the remote repo. By convention, we call the central copy the "origin".
 
 ~~~
-git remote add origin ...
+git remote add origin <URL>
 ~~~
 {:.input}
 
@@ -45,8 +43,8 @@ git push
 {:.input}
 
 ~~~
-Username for 'https://github.com': %username%
-Password for 'https://%username%@github.com': 
+Username for 'https://github.com': <username>
+Password for 'https://<username>@github.com': 
 Counting objects: 3, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
@@ -59,7 +57,13 @@ To https://github.com/itcarroll/test.git
 
 ===
 
-Go check out your README.md on GitHub!
+Take a look at the repository on GitHub.
+
+- `README.md` is a Markdown file giving basic information about the repository.
+- There is a list of files, including a folder for data.
+- You are looking at a branch called `master`.
+- The commit history is available from the top bar.
+- The "Clone or download" button provides a URL.
 
 ===
 

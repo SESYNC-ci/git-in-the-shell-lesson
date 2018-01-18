@@ -11,6 +11,6 @@
 
 ## Specific achievements
 
-- Make commits to a project file
-- Synchronize to a git repository on GitHub
-- Collaborate with another GitHub user
+- Make "commits" to a project file with git
+- "Push" and "pull" project work to GitHub
+- "Merge" your work with a GitHub collaborator's
