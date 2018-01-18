@@ -41,17 +41,18 @@ Push your commit up to the **origin**.
 git push
 ~~~
 {:.input}
-
 ~~~
 Username for 'https://github.com': <username>
 Password for 'https://<username>@github.com': 
-Counting objects: 3, done.
+Counting objects: 9, done.
 Delta compression using up to 4 threads.
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 353 bytes | 0 bytes/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/itcarroll/test.git
-   %hash%..%hash%  master -> master
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.10 KiB | 1.05 MiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To <url>
+   <sha>..<sha>  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.Counting objects: 3, done.
 ~~~
 {:.output}
 
