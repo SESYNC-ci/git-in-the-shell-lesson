@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git and More Tools in the Shell</title>
+<meta name="description" content="">
+<link rel="canonical" href="/course/archive.html">
+<link rel="stylesheet" href="https://cdn.rawgit.com/sesync-ci/lesson-style/v1.3/docs/css/default.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/sesync-ci/lesson-style/v1.3/docs/css/static.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+        
+        
+<h1 style="text-transform: none;" id="git-and-more-tools-in-the-shell">git and More Tools in the Shell</h1>
+
+<p>Lesson 5 with <em>Ian Carroll</em></p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="#/slides/intro">Centralized Workflow</a></li>
+  <li><a href="#/slides/goals">Objectives for this lesson</a></li>
+  <li><a href="#/slides/git">Git in the Shell</a></li>
+  <li><a href="#/slides/terms">What’s a GitHub?</a></li>
+  <li><a href="#/slides/repo">Create a GitHub Repository</a></li>
+  <li><a href="#/slides/merge">Merging</a></li>
+  <li><a href="#/slides/paths">Files under version control</a></li>
+  <li><a href="#/slides/collab">Working with Collaborators</a></li>
+  <li><a href="#/slides/conclude">Share and Share Back</a></li>
+</ul>
+
+<hr />
+
+<p><a name="/slides/intro"></a></p>
+
+<h2 style="color: #FFFFFF; font-weight: 500;" id="centralized-workflow">Centralized Workflow</h2>
+
+<p class="notes">As your research project moves from conception, through data
+collection, modeling and analysis, to publishing and other forms of
+dissemination, it’s components can fracture, lose their development
+history, and—worst of all—become conflicted or lost.</p>
+
+<p class="notes">This lesson explains a high level strategy for organizing your collaborative
+workflow and introduces accompanying software and cloud solutions.</p>
+
+<p class="notes">The strategy for distributed coding among a team of scientists—the
+centralized workflow—is widespread in collaborative research.</p>
+
+<p class="on-white">A <strong>central hub</strong> stores project files and their history. Researchers
+are <strong>spokes</strong> on the wheel, working on private copies of the
+project. Project integrity is maintained through rules enforced by the
+hub for <strong>synchronizing</strong> between hub and spokes.</p>
+
+<p class="ToS"><a href="#/slides/intro">Top of Section</a></p>
+
+<hr />
+
+<p><a name="/slides/goals"></a></p>
+
+<h2 id="objectives-for-this-lesson">Objectives for this lesson</h2>
+
+<ul>
+  <li>See what version control does</li>
+  <li>Learn about centralized workflows</li>
+  <li>Try out GitHub</li>
+</ul>
+
+<h2 id="specific-achievements">Specific achievements</h2>
+
+<ul>
+  <li>Make “commits” to a project file with git</li>
+  <li>“Push” and “pull” project work to GitHub</li>
+  <li>“Merge” your work with a GitHub collaborator’s</li>
+</ul>
+
+<p class="ToS"><a href="#/slides/goals">Top of Section</a></p>
+
+<hr />
+
+<p><a name="/slides/git"></a></p>
+
+<h2 id="git-in-the-shell">Git in the Shell</h2>
+
+<p>The namesake of GitHub is the command-line utility <code class="highlighter-rouge">git</code>. It performs
+the clone, push, pull, and merge procedures just mentioned, and many
+more.</p>
+
+<p>The software has no GUI of it’s own, and works through commands always beginning with “git “ given in the shell. The comamnd to turn the “current folder” into a git repo is:</p>
+
+<div class="language-bash input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div>
+
+<div class="language-bash output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Initialized empty Git repository <span class="k">in</span> ~/handouts/.git/
+Commit your changes with a descriptive but short commit message.
+</code></pre></div></div>
+
+<p>Add files to git’s watchlist with the “add” command</p>
+
+<div class="language-bash input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add README.md
+git status
+</code></pre></div></div>
+
+<div class="language-bash output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On branch master
+
+Initial commit
+
+Changes to be committed:
+  <span class="o">(</span>use <span class="s2">"git rm --cached &lt;file&gt;..."</span> to unstage<span class="o">)</span>
+
+        new file:   README.md
+
+Untracked files:
+</code></pre></div></div>
+
+<p>“Commit” updates the added files in a newly labeled version of your project’s history.</p>
+
+<div class="language-bash input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"initial commit"</span>
+</code></pre></div></div>
+
+<div class="language-bash output highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">***</span> Please tell me who you are.
+
+Run
+
+  git config <span class="nt">--global</span> user.email <span class="s2">"you@example.com"</span>
+  git config <span class="nt">--global</span> user.name <span class="s2">"Your Name"</span>
+
+to <span class="nb">set </span>your account<span class="s1">'s default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for &lt;(null)&gt;) not allowed
+</span></code></pre></div></div>
+
+<p>Every commit needs an author. Follow git’s instructions, using a
+real email address so your commits can be associated with your
+GitHub account, and try again.</p>
+
+<div class="language-bash input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"initial commit"</span>
+</code></pre></div></div>
+
+<div class="language-bash output highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>master <span class="o">(</span>root-commit<span class="o">)</span> &lt;sha&gt;] initial commit
+ 1 file changed, 10 insertions<span class="o">(</span>+<span class="o">)</span>
+ create mode 100755 README.md
+</code></pre></div></div>
+
+<div class="language-bash input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
+
+<div class="language-bash output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On branch master
+Untracked files:
+  <span class="o">(</span>use <span class="s2">"git add &lt;file&gt;..."</span> to include <span class="k">in </span>what will be committed<span class="o">)</span>
+
+	CONTRIBUTING.md
+	data/
+	handouts.Rproj
+	worksheet-1.R
+	worksheet-2.R
+	worksheet-3.R
+	worksheet-4.R
+
+nothing added to commit but untracked files present <span class="o">(</span>use <span class="s2">"git add"</span> to track<span class="o">)</span>
+</code></pre></div></div>
+
+<h2 id="checkout-the-log">Checkout the Log</h2>
+
+<p>Version control gives you access to the state of the repository at any previous commit. View this history in the log.</p>
+
+<div class="input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log
+</code></pre></div></div>
+
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit &lt;sha&gt;
+Author: &lt;author&gt;
+Date:   &lt;datetime&gt;
+
+    initial commit
+</code></pre></div></div>
+
+<h2 id="exercise-1">Exercise 1</h2>
+
+<p>Introduce a second commit that messes up your README.md or another file. Make sure it shows up in the log.</p>
+
+<h2 id="revert">Revert</h2>
+
+<p>Let’s investigate the most recent commit.</p>
+
+<div class="input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git show
+</code></pre></div></div>
+
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit &lt;sha&gt;
+Author: &lt;author&gt;
+Date:   &lt;datetime&gt;
+
+    &lt;message&gt;
+
+&lt;diff&gt;
+</code></pre></div></div>
+
+<p>The <sha>, even just the first few digits at this stage, are unique to each commit. Use "revert" to undo the changes introduced in a specified commit.</sha></p>
+
+<div class="input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git revert --no-edit &lt;sha&gt;
+</code></pre></div></div>
+
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[master &lt;sha&gt;] Revert &lt;message&gt;
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+</code></pre></div></div>
+
+<p class="ToS"><a href="#/slides/git">Top of Section</a></p>
+
+<hr />
+
+<p><a name="/slides/terms"></a></p>
+
+<h2 id="whats-a-github">What’s a GitHub?</h2>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_workflow.svg" alt="" width="70%" /><br />
+<em><a href="https://www.atlassian.com/git/tutorials/comparing-workflows">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
+
+<p>The <strong>origin</strong> is the central copy of the project, a repository that lives on GitHub. Every member of the team uses a <strong>local</strong> copy of the entire project, called a <strong>clone</strong>.</p>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_pull.svg" alt="" width="60%" /><br />
+<em><a href="https://www.atlassian.com/git/tutorials/comparing-workflows">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
+
+<p>Cloning is the initial <strong>pull</strong> of the entire project and all its history. In general, a worker <strong>pulls</strong> the work of other teammates from the <strong>origin</strong> when ready to incorporate their work, and she <strong>pushes</strong> updates to the <strong>origin</strong> when ready to share her own work.</p>
+
+<p>A commit is a unit of work: any collection of changes to one or more files in the repository.
+A versioned project is like a tree of commits, although the current tree has just one <strong>branch</strong>.
+After a worker creates a <strong>clone</strong>, the local copy is viewing the same commit as the <strong>origin</strong>.</p>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_clone.png" alt="" width="40%" style="border: none; box-shadow: none;" /><br />
+<em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
+
+<p>A <strong>pull</strong>, or initially a <strong>clone</strong>, applies commits copied from the <strong>origin</strong> to your local repo, syncing them up.</p>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_after_pull_top.png" alt="" width="60%" style="border: none; box-shadow: none;" /><br />
+<em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
+
+<p>A <strong>pull</strong>, or initially a <strong>clone</strong>, applies commits copied from the <strong>origin</strong> to your local repo, syncing them up.</p>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_after_pull_bottom.png" alt="" width="60%" style="border: none; box-shadow: none;" /><br />
+<em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
+
+<p>A <strong>push</strong> copies local commits to the <strong>origin</strong> and applies them remotely.</p>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_after_push_top.png" alt="" width="70%" style="border: none; box-shadow: none;" /><br />
+<em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
+
+<p>A <strong>push</strong> copies local commits to the <strong>origin</strong> and applies them remotely.</p>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_after_push_bottom.png" alt="" width="70%" style="border: none; box-shadow: none;" /><br />
+<em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
+
+<p class="ToS"><a href="#/slides/terms">Top of Section</a></p>
+
+<hr />
+
+<p><a name="/slides/repo"></a></p>
+
+<h2 id="create-a-github-repository">Create a GitHub Repository</h2>
+
+<ol>
+  <li>
+    <p>Sign in or create a GitHub account.</p>
+  </li>
+  <li>
+    <p>Create a new repository on your GitHub page.</p>
+  </li>
+</ol>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/new_repo-1.png" alt="" width="50%" /></p>
+
+<ol>
+  <li>Give the repo a name</li>
+  <li>Add a short “tag line” to jog your memory</li>
+  <li>Leave the boxes (including the “README”) un-checked</li>
+</ol>
+
+<h2 id="empty-repository">Empty repository</h2>
+
+<p>You have created an empty repository. The quick start information provides clues on how to create your first commit.</p>
+
+<h2 id="configure-your-clone">Configure your clone</h2>
+
+<p>To push and pull from your local repo to GitHub, you must configure your local repo with the URL of the remote repo. By convention, we call the central copy the “origin”.</p>
+
+<div class="input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin &lt;URL&gt;
+</code></pre></div></div>
+
+<p>Push your commit up to the <strong>origin</strong>.</p>
+
+<div class="input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Username for 'https://github.com': &lt;username&gt;
+Password for 'https://&lt;username&gt;@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.10 KiB | 1.05 MiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To &lt;url&gt;
+   &lt;sha&gt;..&lt;sha&gt;  master -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'origin'.Counting objects: 3, done.
+</code></pre></div></div>
+
+<p>Take a look at the repository on GitHub.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">README.md</code> is a Markdown file giving basic information about the repository.</li>
+  <li>There is a list of files, including a folder for data.</li>
+  <li>You are looking at a branch called “master”.</li>
+  <li>The commit history is available from the top bar.</li>
+  <li>The “Clone or download” button provides a URL.</li>
+</ul>
+
+<h2 id="github-editor">GitHub Editor</h2>
+
+<p>The online editor is good for quick-n-easy fixes, and for working on documentation. Its a bad place to modify code, because it’s not tested before reaching the origin. Nevertheless … try it out on README.md.</p>
+
+<p class="ToS"><a href="#/slides/repo">Top of Section</a></p>
+
+<hr />
+
+<p><a name="/slides/merge"></a></p>
+
+<h2 id="merging">Merging</h2>
+
+<p>An essential component of the centralized workflow is the ability to merge commit histories that have diverged. Each fork in the log has to be re-integrated, and git does this automatically through merging.</p>
+
+<div class="input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add worksheet*
+git commit -m 'feel the learn'
+</code></pre></div></div>
+
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[master &lt;sha&gt;] feel the learn
+ 5 files changed, 955 insertions(+)
+</code></pre></div></div>
+
+<p>Merge commits most commonly arise when a commit shows up on GitHub that isn’t in your local clone. Such as the current situation.</p>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_merge.svg" alt="" width="40%" /><br />
+<em><a href="https://www.atlassian.com/git/tutorials/">Image</a> by Atlassian / [CC BY]</em></p>
+
+<p>Even though these changes do not conflict, GitHub won’t allow you to push. Take a moment to read the message, it gives a good explanation of what has happened.</p>
+
+<div class="input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push
+</code></pre></div></div>
+
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>To https://github.com/&lt;username&gt;/&lt;repo&gt;.git
+ ! [rejected]        master -&gt; master (fetch first)
+ error: failed to push some refs to 'https://github.com/&lt;username&gt;/&lt;repo&gt;.git'
+ hint: Updates were rejected because the remote contains work that you do
+ hint: not have locally. This is usually caused by another repository pushing
+ hint: to the same ref. You may want to first integrate the remote changes
+ hint: (e.g., 'git pull ...') before pushing again.
+ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre></div></div>
+
+<h2 id="take-the-hint">Take the Hint!</h2>
+
+<div class="input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull
+</code></pre></div></div>
+
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/&lt;username&gt;/&lt;repo&gt;
+   15bc488..26c2dcd  master     -&gt; origin/master
+   Auto-merging README.md
+   Merge made by the 'recursive' strategy.
+    README.md | 1 +
+	 1 file changed, 1 insertion(+)
+</code></pre></div></div>
+
+<p>The message tells you about any changes made by this <strong>merge commit</strong>, which seamlessly integrates changes to the same file by multiple authors.</p>
+
+<p class="ToS"><a href="#/slides/merge">Top of Section</a></p>
+
+<hr />
+
+<p><a name="/slides/paths"></a></p>
+
+<h2 id="files-under-version-control">Files under version control</h2>
+
+<p>A scripted pipeline relies heavily on plain text files (the scripts),
+but may include different file types for figures or even some
+data.</p>
+
+<ul>
+  <li>Any file in the directory that is under version control is
+monitored for differences from the committed state of the
+project.</li>
+  <li>Files must be added to at least one commit before they are
+tracked.</li>
+</ul>
+
+<h2 id="not-under-version-control">Not under version control</h2>
+
+<p>The most common pipeline integration is shared data storage, which is
+either too large to include or not a flat file.</p>
+
+<ul>
+  <li>Local area network file share (e.g. Z:\\…)</li>
+  <li>Cloud storeage (e.g. Dropbox, Google Drive)</li>
+  <li>Database (e.g. lab PostgreSQL server)</li>
+</ul>
+
+<h2 id="path-to-shared-data">Path to shared data</h2>
+
+<p>The best practice is to create of shortcut to shared data
+files, and reference the local shortcut in code. For example,
+use the <code class="highlighter-rouge">ln</code> command in the shell to create a fake folder
+as a relative path inside your repository.</p>
+
+<div class="language-bash input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir <span class="s2">"~/Google Drive"</span>
+ln <span class="nt">-s</span> cloud <span class="s2">"~/Google Drive/"</span>
+</code></pre></div></div>
+
+<h2 id="ignore-exclusions">Ignore Exclusions</h2>
+
+<div class="language-bash text-document highlighter-rouge" title=".gitignore"><div class="highlight"><pre class="highlight"><code>data/<span class="k">**</span>
+cloud/<span class="k">**</span>
+</code></pre></div></div>
+
+<p class="ToS"><a href="#/slides/paths">Top of Section</a></p>
+
+<hr />
+
+<p><a name="/slides/collab"></a></p>
+
+<h2 id="working-with-collaborators">Working with Collaborators</h2>
+
+<p>True collaboration goes deeper than commenting on a final report, but integrated work on a project from start to finish raises workflow challenges.</p>
+
+<ul>
+  <li>Be it data, a script, or a write-up, who has the most up-to-date version?</li>
+  <li>Will a teammate’s work overwrite any of your own?</li>
+  <li>How do I recover the working version of code the PI broke?</li>
+</ul>
+
+<p>Centralized workflows, managed by <code class="highlighter-rouge">git</code>, help solve these challenges.</p>
+
+<h2 id="project-integrity">Project Integrity</h2>
+
+<ul>
+  <li>The <strong>origin</strong> becomes the official up-to-date repo, <em>even</em> if your work is a few commits ahead.</li>
+  <li>Diverging files are easily reintegrated with a <strong>merge</strong> algorithm.</li>
+  <li>The complete project history is available to <strong>checkout</strong>.</li>
+</ul>
+
+<p class="notes">Note, version control works really well with text. Non-textual components of your project (e.g. large or binary data) rarely live in a repository. Use cloud storage for more static files and a database for dynamic records.</p>
+
+<h2 id="create-a-new-file">Create a new file</h2>
+
+<p>Create a new text file as below, adding yourself as the first collaborator.</p>
+
+<div class="text-document highlighter-rouge" title="collaborators.md"><div class="highlight"><pre class="highlight"><code>## Project Collaborators
+
+- ...
+- My neighbor!
+</code></pre></div></div>
+
+<p>Our aim is to let your project collaborator replace “My neighbor!” with his or her name.</p>
+
+<h2 id="track-it-with-git">Track it with git</h2>
+
+<p>Before you can commit changes involving a new file, you have to tell the version control system (that’s <code class="highlighter-rouge">git</code>!) to watch it..</p>
+
+<div class="language-bash input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add collaborators.md
+git commit <span class="nt">-m</span> <span class="s1">'just me so far!'</span>
+</code></pre></div></div>
+
+<h2 id="push">Push</h2>
+
+<p>Look at the <code class="highlighter-rouge">git status</code> and notice that your branch is ahead of origin/master! Push those commit(s) to your GitHub repo.</p>
+
+<h2 id="collaborate">Collaborate!</h2>
+
+<p>The first step to collaborative workflows is granting access to the <strong>origin</strong> of your project. Introduce yourself to your neighbor, and ask for his/her GitHub username.</p>
+
+<p class="captioned"><img src="/git-in-the-shell-lesson/images/repo_collab.png" alt="" /></p>
+
+<p>Add your neighbor as a collaborator, and accept your neighbor’s invitation to collaborate!</p>
+
+<p>As a collaborator on your neighbors repository, you have permission to edit their <code class="highlighter-rouge">collaborators.md</code>.</p>
+
+<p class="notes">The text below shows “My Neighbor!” where you should see your neighbor’s name. Edit the file in your neighbor’s repo, by replacing the remaining “My neighbor!” with your own name.</p>
+
+<div class="text-document highlighter-rouge" title="collaborators.md"><div class="highlight"><pre class="highlight"><code>## Project Collaborators
+
+- My neighbor!
+- ...
+</code></pre></div></div>
+
+<p>Write a meaningful commit message to save your work.</p>
+
+<h2 id="integrate-your-collaborators-work">Integrate your Collaborator’s work</h2>
+
+<p>If you have no uncommited work in your tracked files, you can pull down the new commit from your neighbor and “fast-forward” your project.</p>
+
+<div class="language-bash input highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull
+</code></pre></div></div>
+
+<p class="ToS"><a href="#/slides/collab">Top of Section</a></p>
+
+<hr />
+
+<p><a name="/slides/conclude"></a></p>
+
+<h2 id="share-and-share-back">Share and Share Back</h2>
+
+<ul>
+  <li>
+    <p>The repository you created is an example of the heart of a
+distributed workflow. Putting the <strong>origin</strong> of your project on
+GitHub (or similar) will make it accessible not only by your
+collaborators, but also available for review and extension by your
+research community.</p>
+  </li>
+  <li>
+    <p>GitHub is the home of the vast majority of open source sofware,
+including R and Pythong packages, that help research
+advance. Through GitHub you can track issues with software you use,
+pitch in on solving problems, and even submit “pull requests” for
+new features you develop.</p>
+  </li>
+</ul>
+
+<p class="ToS"><a href="#/slides/conclude">Top of Section</a></p>
+
+<hr />
+
+
+
+      </div>
+    </div>
+  <script>
+ var collection = document.getElementsByClassName('rlib');
+ for (var i = 0; i < collection.length; i++) {
+     var a = collection[i];
+     a.href = 'https://cran.r-project.org/package=' + a.innerText;
+ };
+ var collection = document.getElementsByClassName('pylib');
+ for (var i = 0; i < collection.length; i++) {
+     var a = collection[i];
+     a.href = 'https://pypi.python.org/pypi/' + a.innerText;
+ };
+</script>
+
+  </body>
+</html>
