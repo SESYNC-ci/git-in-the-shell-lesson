@@ -1,0 +1,71 @@
+---
+title: configure git and data shortcut
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Git in the Shell
+
+```{bash}
+git init
+```
+
+```{bash}
+git add ...
+git status
+```
+
+```{bash}
+... -m "initial commit"
+```
+
+```{bash}
+git config --global user.name ...
+git config --global user.email ...
+```
+
+## Checkout the Log
+
+```{bash}
+git log
+```
+
+## Exercise 1
+
+```{bash}
+...
+```
+
+## Revert
+
+```{bash}
+git show
+```
+
+```{bash}
+git revert --no-edit ...
+```
+
+## Configure your clone
+
+```{bash}
+git remote add origin ...
+git push
+```
+
+```{bash}
+git add ...
+git commit ...
+```
+
+```{r}
+file.symlink(
+  from = ...,
+  to = 'data'
+)
+```
+
+```{bash}
+git add README.md
+git commit -m 'just me so far!'
+```

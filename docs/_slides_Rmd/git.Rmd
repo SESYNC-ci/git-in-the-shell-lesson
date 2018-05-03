@@ -11,11 +11,9 @@ more.
 
 The software has no GUI of it's own, and works through commands always beginning with "git " given in the shell. The comamnd to turn the "current folder" into a git repo is:
 
-
-~~~bash
+```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
 git init
-~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+```
 
 ===
 
@@ -31,11 +29,9 @@ git status
 
 "Commit" updates the added files in a newly labeled version of your project's history.
 
-
-~~~bash
+```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
 git commit -m "initial commit"
-~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+```
 
 ~~~bash
 *** Please tell me who you are.
@@ -58,19 +54,15 @@ Every commit needs an author. Follow git's instructions, using a
 real email address so your commits can be associated with your
 GitHub account, and try again.
 
-
-~~~bash
+```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
 git commit -m "initial commit"
-~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+```
 
 ===
 
-
-~~~bash
+```{bash, eval = FALSE}
 git status
-~~~
-{:.input}
+```
 
 ===
 
@@ -78,11 +70,9 @@ git status
 
 Version control gives you access to the state of the repository at any previous commit. View this history in the log.
 
-
-~~~bash
+```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
 git log
-~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+```
 
 ~~~bash
 commit <sha>
@@ -106,11 +96,9 @@ shows up in the log.
 
 Let's investigate the most recent commit.
 
-
-~~~bash
+```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
 git show
-~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+```
 ~~~
 commit <sha>
 Author: <author>
@@ -126,11 +114,9 @@ Date:   <datetime>
 The <sha>, or however many digits of it are needed, provides a unique label for
 each commit. Use "revert" to undo the changes introduced in a specified commit.
 
-
-~~~bash
+```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
 git revert --no-edit <sha>
-~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+```
 ~~~
 [master <sha>] Revert <message>
  1 file changed, 1 insertion(+), 1 deletion(-)
