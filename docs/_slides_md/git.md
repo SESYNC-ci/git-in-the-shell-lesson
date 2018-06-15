@@ -60,13 +60,6 @@ GitHub account, and try again.
 
 ~~~bash
 git commit -m "initial commit"
-~~~
-{:.input}
-
-===
-
-
-~~~bash
 git status
 ~~~
 {:.input}
