@@ -86,5 +86,5 @@ Create a new file called "README.md" and add the following content on separate l
 1. A "Contributors" section, preced by `##`
 1. Your name, preceded by `-` (the markdown bulleted list)
 
-As you go, utilize the Preview tab to se the result of rendering your Markdown to HTML.
+As you go, utilize the Preview tab to see the result of rendering your Markdown to HTML.
 
