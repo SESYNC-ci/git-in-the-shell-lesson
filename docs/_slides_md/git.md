@@ -11,27 +11,30 @@ more.
 
 The software has no GUI of it's own, and works through commands always beginning with "git " given in the shell. The comamnd to turn the "current folder" into a git repo is:
 
-```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
+~~~bash
 git init
-```
+~~~
+{:.input}
 
 ===
 
 Add files to git's watchlist with the "add" command
 
 ~~~bash
-git add {{ site.handouts[0] }}
+git add <path>
 git status
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 
 ===
 
 "Commit" updates the added files in a newly labeled version of your project's history.
 
-```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
+
+~~~bash
 git commit -m "initial commit"
-```
+~~~
+{:.input}
 
 ~~~bash
 *** Please tell me who you are.
@@ -54,15 +57,19 @@ Every commit needs an author. Follow git's instructions, using a
 real email address so your commits can be associated with your
 GitHub account, and try again.
 
-```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
+
+~~~bash
 git commit -m "initial commit"
-```
+~~~
+{:.input}
 
 ===
 
-```{bash, eval = FALSE}
+
+~~~bash
 git status
-```
+~~~
+{:.input}
 
 ===
 
@@ -70,9 +77,11 @@ git status
 
 Version control gives you access to the state of the repository at any previous commit. View this history in the log.
 
-```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
+
+~~~bash
 git log
-```
+~~~
+{:.input}
 
 ~~~bash
 commit <sha>
@@ -87,8 +96,7 @@ Date:   <datetime>
 
 ## Exercise 1
 
-Edit {{ site.handouts[0] }} with some small, breaking change--a typo in the `git` command. Create a second commit that includes this change, and make sure it
-shows up in the log.
+Edit your commited file with some small, breaking change. Create a second commit that includes this change, and make sure it shows up in the log.
 
 ===
 
@@ -96,9 +104,11 @@ shows up in the log.
 
 Let's investigate the most recent commit.
 
-```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
+
+~~~bash
 git show
-```
+~~~
+{:.input}
 ~~~
 commit <sha>
 Author: <author>
@@ -108,17 +118,20 @@ Date:   <datetime>
 
 <diff>
 ~~~
+{:.output style="display: block;"}
 
 ===
 
 The <sha>, or however many digits of it are needed, provides a unique label for
 each commit. Use "revert" to undo the changes introduced in a specified commit.
 
-```{bash, eval = FALSE, title = "{{ site.handouts[0] }}"}
+
+~~~bash
 git revert --no-edit <sha>
-```
+~~~
+{:.input}
 ~~~
 [master <sha>] Revert <message>
  1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
-{:.output}
+{:.output style="display: block;"}

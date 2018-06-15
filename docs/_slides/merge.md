@@ -8,10 +8,10 @@ An essential component of the centralized workflow is the ability to merge commi
 ===
 
 ~~~
-git add {{ site.handouts[0] }}
+git add <path>
 git commit -m 'feel the learn'
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 
 ~~~
 [master <sha>] feel the learn
@@ -66,12 +66,12 @@ git pull
 {:.input}
 
 ~~~
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
+remote: Counting objects: <progress>
+remote: Compressing objects: <progress>
+remote: <stats>
+Unpacking objects: <progress>
 From https://github.com/<username>/<repo>
-   15bc488..26c2dcd  master     -> origin/master
+   <sha>..<sha>  master     -> origin/master
    Auto-merging README.md
    Merge made by the 'recursive' strategy.
     README.md | 1 +

@@ -24,15 +24,15 @@ Note, version control works really well with text. Non-textual components of you
 
 ===
 
-~~~bash
+~~~markdown
 ## Collaborators
 
 - <your name>
-- My collaborator!
+- My Neighbor
 ~~~
 {:.text-document title="README.md"}
 
-Our aim is to let your project collaborator replace "My collaborator!" with his or
+Our aim is to let your project collaborator replace "My Neighbor" with his or
 her name.
 
 ===
@@ -41,11 +41,11 @@ her name.
 
 Before you can commit changes involving a new file, you have to tell the version control system (that's `git`!) what changes to include.
 
-```bash
+~~~bash
 git add README.md
 git commit -m 'just me so far!'
-```
-{:.text-document title="{{ site.handouts[0] }}"}
+~~~
+{:.input}
 
 ===
 
@@ -72,10 +72,10 @@ Add your neighbor as a collaborator!
 
 As the collaborator on your neighbors repository, you have permission to edit his or her "README.md". Make sure you accept the invitation to collaborate in your email!
 
-The text below shows where you'll see the owner's name if you're looking at the right (not your own). The collaborator should edit the file in the owner's repo, by replacing "My collaborator!" with his or her own name.
+The text below shows where you'll see the owner's name if you're looking at the right (not your own). The collaborator should edit the file in the owner's repo, by replacing "My Neighbor" with his or her own name.
 {:.notes}
 
-~~~
+~~~markdown
 ## Collaborators
 
 - <the owner's name>

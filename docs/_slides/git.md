@@ -11,21 +11,20 @@ more.
 
 The software has no GUI of it's own, and works through commands always beginning with "git " given in the shell. The comamnd to turn the "current folder" into a git repo is:
 
-
 ~~~bash
 git init
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 
 ===
 
 Add files to git's watchlist with the "add" command
 
 ~~~bash
-git add {{ site.handouts[0] }}
+git add <path>
 git status
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 
 ===
 
@@ -35,7 +34,7 @@ git status
 ~~~bash
 git commit -m "initial commit"
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 
 ~~~bash
 *** Please tell me who you are.
@@ -62,7 +61,7 @@ GitHub account, and try again.
 ~~~bash
 git commit -m "initial commit"
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 
 ===
 
@@ -82,7 +81,7 @@ Version control gives you access to the state of the repository at any previous 
 ~~~bash
 git log
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 
 ~~~bash
 commit <sha>
@@ -97,8 +96,7 @@ Date:   <datetime>
 
 ## Exercise 1
 
-Edit {{ site.handouts[0] }} with some small, breaking change--a typo in the `git` command. Create a second commit that includes this change, and make sure it
-shows up in the log.
+Edit your commited file with some small, breaking change. Create a second commit that includes this change, and make sure it shows up in the log.
 
 ===
 
@@ -110,7 +108,7 @@ Let's investigate the most recent commit.
 ~~~bash
 git show
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 ~~~
 commit <sha>
 Author: <author>
@@ -120,6 +118,7 @@ Date:   <datetime>
 
 <diff>
 ~~~
+{:.output style="display: block;"}
 
 ===
 
@@ -130,9 +129,9 @@ each commit. Use "revert" to undo the changes introduced in a specified commit.
 ~~~bash
 git revert --no-edit <sha>
 ~~~
-{:.text-document title="{{ site.handouts[0] }}"}
+{:.input}
 ~~~
 [master <sha>] Revert <message>
  1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
-{:.output}
+{:.output style="display: block;"}
