@@ -12,7 +12,7 @@ A "merge conflict" will arise when two contributors change a line of text. For e
 
 The owner adds a description under "# About" in the local clone. Meanwhile the collaborator adds a description under "# About" using the GitHub editor in the owner's repository.
 
-~~~bash
+~~~markdown
 # About
 
 ...
@@ -24,28 +24,38 @@ The owner adds a description under "# About" in the local clone. Meanwhile the c
 The owner commits his or her change, but receives an error message from git when attempting to pull.
 
 ~~~bash
-CONFLICT (content): Merge conflict in <fileName>
+git pull
+~~~
+{:.input}
+~~~bash
+CONFLICT (content): Merge conflict in <path>
 Automatic merge failed; fix conflicts and then commit the result.
 ~~~
+{:.output}
 
 ===
 
 Any conflicted region is fenced off in the named files, and must be manually
 tidied up.
 
-~~~bash
+~~~markdown
 <<<<<<< HEAD:master
  ...
 =======
  ...
 >>>>>>>
 ~~~
+{:.text-document title="README.md"}
 
 ===
 
 Follow all the instructions in the original message (or ask again with a 
 `git status`):
 
+~~~bash
+git status
+~~~
+{:.input}
 ~~~bash
 You have unmerged paths.
  (fix conflicts and run "git commit")
