@@ -36,12 +36,17 @@
 	       controls: false,
 	       // Transition
 	       transition: "none",
+               // Other
+               math: {
+                   mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js',
+                   config: 'TeX-AMS_SVG'
+               },
 	       // Plugins
 	       dependencies: [
 		         // Zoom in and out with Alt+click
 		         { src: "{{ site.reveal }}/plugin/zoom-js/zoom.js", async: true },
 		         // Speaker notes
-		         { src: "{{ site.reveal }}/plugin/notes/notes.js", async: true },
+		         // { src: "{{ site.reveal }}/plugin/notes/notes.js", async: true },
 		         // MathJax
 		         { src: "{{ site.reveal }}/plugin/math/math.js", async: true },
 	       ],
