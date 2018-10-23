@@ -26,7 +26,7 @@ The owner commits his or her change, but receives an error message from git when
 ~~~bash
 git pull
 ~~~
-{:.input}
+{:.input title="Terminal"}
 ~~~bash
 CONFLICT (content): Merge conflict in <path>
 Automatic merge failed; fix conflicts and then commit the result.
@@ -55,7 +55,7 @@ Follow all the instructions in the original message (or ask again with a
 ~~~bash
 git status
 ~~~
-{:.input}
+{:.input title="Terminal"}
 ~~~bash
 You have unmerged paths.
  (fix conflicts and run "git commit")

@@ -45,7 +45,7 @@ Before you can commit changes involving a new file, you have to tell the version
 git add README.md
 git commit -m 'just me so far!'
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ===
 

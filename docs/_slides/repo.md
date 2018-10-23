@@ -34,7 +34,7 @@ the "origin".
 ~~~
 git remote add origin <URL>
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ===
 
@@ -43,7 +43,7 @@ Push your commit up to the **origin**.
 ~~~
 git push
 ~~~
-{:.input}
+{:.input title="Terminal"}
 ~~~
 Username for 'https://github.com': <username>
 Password for 'https://<username>@github.com': 

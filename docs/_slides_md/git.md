@@ -14,7 +14,7 @@ The software has no GUI of it's own, and works through commands always beginning
 ~~~bash
 git init
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ===
 
@@ -24,7 +24,7 @@ Add files to git's watchlist with the "add" command
 git add <path>
 git status
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ===
 
@@ -34,7 +34,7 @@ git status
 ~~~bash
 git commit -m "initial commit"
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ~~~bash
 *** Please tell me who you are.
@@ -62,7 +62,7 @@ GitHub account, and try again.
 git commit -m "initial commit"
 git status
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ===
 
@@ -74,7 +74,7 @@ Version control gives you access to the state of the repository at any previous 
 ~~~bash
 git log
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ~~~bash
 commit <sha>
@@ -101,7 +101,7 @@ Let's investigate the most recent commit.
 ~~~bash
 git show
 ~~~
-{:.input}
+{:.input title="Terminal"}
 ~~~
 commit <sha>
 Author: <author>
@@ -122,7 +122,7 @@ each commit. Use "revert" to undo the changes introduced in a specified commit.
 ~~~bash
 git revert --no-edit <sha>
 ~~~
-{:.input}
+{:.input title="Terminal"}
 ~~~
 [master <sha>] Revert <message>
  1 file changed, 1 insertion(+), 1 deletion(-)

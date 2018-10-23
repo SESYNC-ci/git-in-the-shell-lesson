@@ -11,7 +11,7 @@ An essential component of the centralized workflow is the ability to merge commi
 git add <path>
 git commit -m 'feel the learn'
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ~~~
 [master <sha>] feel the learn
@@ -34,7 +34,7 @@ Even though these changes do not conflict, GitHub won't allow you to push. Take 
 ~~~
 git push
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ~~~
 To https://github.com/<username>/<repo>.git
@@ -63,7 +63,7 @@ the repo, the contributor is always responsible for "overseeing" the merge on a 
 ~~~
 git pull
 ~~~
-{:.input}
+{:.input title="Terminal"}
 
 ~~~
 remote: Counting objects: <progress>
