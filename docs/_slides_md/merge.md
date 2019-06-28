@@ -23,7 +23,9 @@ git commit -m 'feel the learn'
 
 Merge commits most commonly arise when a commit shows up on GitHub that isn't in your local clone. Such as the current situation.
 
-![]({{ site.baseurl }}/images/atlassian_merge.svg){:width="50%"}  
+===
+
+![]({{ site.baseurl }}/images/atlassian_merge.svg){:width="50%" style="border: none; box-shadow: none;"}  
 *[Image][using-branches] by Atlassian / [CC BY]*
 {:.captioned}
 
