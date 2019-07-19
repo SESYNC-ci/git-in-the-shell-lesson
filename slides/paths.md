@@ -33,12 +33,14 @@ for data files, and only reference the shortcut in code. For example,
 use R's `file.symlink` command to create a fake folder
 as a relative path inside your repository.
 
-```{r, eval = FALSE, title = "{{ site.handouts[0] }}"}
+
+~~~r
 file.symlink(
   from = /path/to/data,
   to = 'data'
 )
-```
+~~~
+{:.text-document title="{{ site.data.lesson.handouts[0] }}"}
 
 ===
 

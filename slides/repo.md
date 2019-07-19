@@ -9,7 +9,7 @@
 
 ===
 
-![]({{ site.baseurl }}/images/new_repo-1.png){:width="50%"}  
+![]({% include asset.html path="images/new_repo-1.png" %}){:width="50%"}  
 {:.captioned}
 
 1. Give the repo a name

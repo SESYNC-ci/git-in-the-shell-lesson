@@ -61,7 +61,7 @@ The first step to collaborative workflows is granting access to the **origin** o
 
 ===
 
-![]({{ site.baseurl }}/images/repo_collab.png)
+![]({% include asset.html path="images/repo_collab.png" %})
 {:.captioned}
 
 Add your neighbor as a collaborator!

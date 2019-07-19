@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,8 +10,8 @@
 <title>git and More Tools in the Shell</title>
 <meta name="description" content="">
 <link rel="canonical" href="/course/archive.html">
-<link rel="stylesheet" href="https://cdn.rawgit.com/sesync-ci/lesson-style/v1.3/docs/css/default.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/sesync-ci/lesson-style/v1.3/docs/css/static.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sesync-ci/lesson-style@v1.3/docs/css/default.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sesync-ci/lesson-style@v1.3/docs/css/static.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 
   </head>
@@ -217,12 +220,12 @@ Date:   &lt;datetime&gt;
 
 <h2 id="whats-a-github">What’s a GitHub?</h2>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_workflow.svg" alt="" width="70%" /><br />
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/atlassian_workflow.svg" alt="" width="70%" /><br />
 <em><a href="https://www.atlassian.com/git/tutorials/comparing-workflows">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
 
 <p>The <strong>origin</strong> is the central copy of the project, a repository that lives on GitHub. Every member of the team uses a <strong>local</strong> copy of the entire project, called a <strong>clone</strong>.</p>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_pull.svg" alt="" width="60%" /><br />
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/atlassian_pull.svg" alt="" width="60%" /><br />
 <em><a href="https://www.atlassian.com/git/tutorials/comparing-workflows">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
 
 <p>Cloning is the initial <strong>pull</strong> of the entire project and all its history. In general, a worker <strong>pulls</strong> the work of other teammates from the <strong>origin</strong> when ready to incorporate their work, and she <strong>pushes</strong> updates to the <strong>origin</strong> when ready to share her own work.</p>
@@ -231,27 +234,27 @@ Date:   &lt;datetime&gt;
 A versioned project is like a tree of commits, although the current tree has just one <strong>branch</strong>.
 After a worker creates a <strong>clone</strong>, the local copy is viewing the same commit as the <strong>origin</strong>.</p>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_clone.png" alt="" width="40%" style="border: none; box-shadow: none;" /><br />
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/atlassian_clone.png" alt="" width="40%" style="border: none; box-shadow: none;" /><br />
 <em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
 
 <p>A <strong>pull</strong>, or initially a <strong>clone</strong>, applies commits copied from the <strong>origin</strong> to your local repo, syncing them up.</p>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_after_pull_top.png" alt="" width="60%" style="border: none; box-shadow: none;" /><br />
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/atlassian_after_pull_top.png" alt="" width="60%" style="border: none; box-shadow: none;" /><br />
 <em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
 
 <p>A <strong>pull</strong>, or initially a <strong>clone</strong>, applies commits copied from the <strong>origin</strong> to your local repo, syncing them up.</p>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_after_pull_bottom.png" alt="" width="60%" style="border: none; box-shadow: none;" /><br />
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/atlassian_after_pull_bottom.png" alt="" width="60%" style="border: none; box-shadow: none;" /><br />
 <em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
 
 <p>A <strong>push</strong> copies local commits to the <strong>origin</strong> and applies them remotely.</p>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_after_push_top.png" alt="" width="70%" style="border: none; box-shadow: none;" /><br />
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/atlassian_after_push_top.png" alt="" width="70%" style="border: none; box-shadow: none;" /><br />
 <em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
 
 <p>A <strong>push</strong> copies local commits to the <strong>origin</strong> and applies them remotely.</p>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_after_push_bottom.png" alt="" width="70%" style="border: none; box-shadow: none;" /><br />
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/atlassian_after_push_bottom.png" alt="" width="70%" style="border: none; box-shadow: none;" /><br />
 <em><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">Image</a> by Atlassian / <a href="http://creativecommons.org/licenses/by/2.5/au/">CC BY</a></em></p>
 
 <p class="ToS"><a href="#/slides/terms">Top of Section</a></p>
@@ -271,7 +274,7 @@ After a worker creates a <strong>clone</strong>, the local copy is viewing the s
   </li>
 </ol>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/new_repo-1.png" alt="" width="50%" /></p>
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/new_repo-1.png" alt="" width="50%" /></p>
 
 <ol>
   <li>Give the repo a name</li>
@@ -341,7 +344,7 @@ git commit -m 'feel the learn'
 
 <p>Merge commits most commonly arise when a commit shows up on GitHub that isn’t in your local clone. Such as the current situation.</p>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/atlassian_merge.svg" alt="" width="40%" /><br />
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/atlassian_merge.svg" alt="" width="40%" /><br />
 <em><a href="https://www.atlassian.com/git/tutorials/">Image</a> by Atlassian / [CC BY]</em></p>
 
 <p>Even though these changes do not conflict, GitHub won’t allow you to push. Take a moment to read the message, it gives a good explanation of what has happened.</p>
@@ -482,7 +485,7 @@ git commit <span class="nt">-m</span> <span class="s1">'just me so far!'</span>
 
 <p>The first step to collaborative workflows is granting access to the <strong>origin</strong> of your project. Introduce yourself to your neighbor, and ask for his/her GitHub username.</p>
 
-<p class="captioned"><img src="/git-in-the-shell-lesson/images/repo_collab.png" alt="" /></p>
+<p class="captioned"><img src="https://cdn.jsdelivr.net/gh/sesync-ci/git-in-the-shell-lesson@v0.2/docs/images/repo_collab.png" alt="" /></p>
 
 <p>Add your neighbor as a collaborator, and accept your neighbor’s invitation to collaborate!</p>
 

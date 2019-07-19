@@ -25,7 +25,7 @@ Merge commits most commonly arise when a commit shows up on GitHub that isn't in
 
 ===
 
-![]({{ site.baseurl }}/images/atlassian_merge.svg){:width="50%" style="border: none; box-shadow: none;"}  
+![]({% include asset.html path="images/atlassian_merge.svg" %}){:width="50%" style="border: none; box-shadow: none;"}  
 *[Image][using-branches] by Atlassian / [CC BY]*
 {:.captioned}
 
