@@ -18,7 +18,7 @@ git init
 
 ===
 
-Add files to git's watchlist with the "add" command
+Add files to git's watchlist with the "add" command. This action is also known as "staging" files.
 
 ~~~bash
 git add <path>
@@ -28,7 +28,7 @@ git status
 
 ===
 
-"Commit" updates the added files in a newly labeled version of your project's history.
+"Commit" updates the added (staged) files in a newly labeled version of your project's history.
 
 
 ~~~bash
@@ -64,9 +64,19 @@ git status
 ~~~
 {:.input title="Terminal"}
 
+Now, author information will be associated with any commits you make.
+This is a one-time configuration for each computer on which you use git.
+{:.notes}
+
+Saving, staging, and committing are each separate steps, none of which imply any
+of the others. This may seem like a hassle, but is a good thing! As your project
+grows larger, you will frequently save changes you don't want to commit: staging
+lets you choose what changes get packaged into a commit.
+{:.notes}
+
 ===
 
-## Checkout the Log
+## Look at the Log
 
 Version control gives you access to the state of the repository at any previous commit. View this history in the log.
 
@@ -89,7 +99,7 @@ Date:   <datetime>
 
 ## Exercise 1
 
-Edit your commited file with some small, breaking change. Create a second commit that includes this change, and make sure it shows up in the log.
+Edit your committed file with some small, breaking change. Create a second commit that includes this change, and make sure it shows up in the log.
 
 ===
 

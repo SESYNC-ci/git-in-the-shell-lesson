@@ -3,7 +3,11 @@
 
 ## Merge Conflicts
 
-Diverging commits that do not affect the same files, or affect different lines within a file, can usually be merged automatically. If git cannot safely merge commits, it guides you through conflict resolution.
+Diverging commits that do not affect the same files, or affect different lines within a file, can usually be merged
+automatically. That's what happened in the previous example where everything happened in sequence. First, the owner committed
+and pushed, then the collaborator pulled, committed, and pushed, then the owner pulled again. 
+But if both owner and collaborator modify the same file simultaneously, git cannot safely merge the commits because 
+it has no way of knowing which version to use. If git cannot safely merge commits, it guides you through conflict resolution.
 {:.notes}
 
 A "merge conflict" will arise when two contributors change a line of text. For example, if you both add a project description.
@@ -35,8 +39,13 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 ===
 
-Any conflicted region is fenced off in the named files, and must be manually
-tidied up.
+Any conflicted region is fenced off in the named files with conflict markers 
+and must be manually tidied up.
+
+`<<<<<<<` indicates the beginning of your version of the conflicted section,
+then `=======` indicates the beginning of your neighbor's version, which ends
+with `>>>>>>>`.
+{:.notes}
 
 ~~~markdown
 <<<<<<< HEAD:master
@@ -64,6 +73,11 @@ Unmerged paths:
  (use "git add <file>..." to mark resolution)
 ~~~
 {:.output}
+
+*Important note*: If you find resolving merge conflicts confusing, the best way to avoid them is to **pull before you push**!
+That means always pull the most recent version of the repo from the remote before making changes. 
+That way, merge conflicts will only occur if you and your collaborator(s) are working on the code at the exact same time.
+{:.notes}
 
 ===
 

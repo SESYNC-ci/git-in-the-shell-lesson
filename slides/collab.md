@@ -32,6 +32,7 @@ Note, version control works really well with text. Non-textual components of you
 ~~~
 {:.text-document title="README.md"}
 
+Add a section where you can list collaborators to the `README.md` file.
 Our aim is to let your project collaborator replace "My Neighbor" with his or
 her name.
 
@@ -59,6 +60,9 @@ Look at the `git status` and notice that your branch is ahead of origin/master! 
 
 The first step to collaborative workflows is granting access to the **origin** of your project. Introduce yourself to your neighbor, and decide which of you will be the "owner" and which the "collaborator". The owner will need the collaborator's GitHub username.
 
+Even on public GitHub repos, only the owner has “push access” by default. The owner can allow any other GitHub user to push by inviting collaborators under the Settings tab (Settings > Manage access > Invite a collaborator).
+{:.notes}
+
 ===
 
 ![]({% include asset.html path="images/repo_collab.png" %})
@@ -70,7 +74,7 @@ Add your neighbor as a collaborator!
 
 ## Exercise 3
 
-As the collaborator on your neighbors repository, you have permission to edit his or her "README.md". Make sure you accept the invitation to collaborate in your email!
+As the collaborator on your neighbor's repository, you have permission to edit his or her `README.md`. Make sure you accept the invitation to collaborate in your email!
 
 The text below shows where you'll see the owner's name if you're looking at the right (not your own). The collaborator should edit the file in the owner's repo, by replacing "My Neighbor" with his or her own name.
 {:.notes}

@@ -23,13 +23,23 @@ A commit is a unit of work: any collection of changes to one or more files in th
 A versioned project is like a tree of commits, although the current tree has just one **branch**.
 After a worker creates a **clone**, the local copy is viewing the same commit as the **origin**.
 
+In the following diagrams, the lower box represents the local repo (on your machine)
+and the upper box represents the remote repo (on GitHub). The graph in the middle 
+represents successive commits over time, moving from left to right. Notice that the 
+local and remote (origin) repos are both on a branch called *master* in the diagram
+below. This is the default name given to the primary version of the repository.
+As of June 2020, discussions are underway to 
+[rename the "master"" branch to avoid referencing slavery](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/),
+so you may notice this terminology change in the near future. 
+{:.notes}
+
 ![]({% include asset.html path="images/atlassian_clone.png" %}){:width="40%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
 {:.captioned}
 
 ===
 
-A **pull**, or initially a **clone**, applies commits copied from the **origin** to your local repo, syncing them up.
+When the origin has commits that do not exist in the local repo, it has gotten ahead and a **pull** is required to synchronize state.
 
 ![]({% include asset.html path="images/atlassian_after_pull_top.png" %}){:width="60%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
@@ -37,7 +47,8 @@ A **pull**, or initially a **clone**, applies commits copied from the **origin**
 
 ===
 
-A **pull**, or initially a **clone**, applies commits copied from the **origin** to your local repo, syncing them up.
+A **pull**, or initially a **clone**, applies commits copied from the **origin** to your local repo, syncing them up
+as if you had created identical commits locally.
 
 ![]({% include asset.html path="images/atlassian_after_pull_bottom.png" %}){:width="60%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
@@ -45,7 +56,8 @@ A **pull**, or initially a **clone**, applies commits copied from the **origin**
 
 ===
 
-A **push** copies local commits to the **origin** and applies them remotely.
+In the opposite situation, commits created locally are not immediately
+synchronized to the **origin**.
 
 ![]({% include asset.html path="images/atlassian_after_push_top.png" %}){:width="70%" style="border: none; box-shadow: none;"}  
 *[Image][syncing] by Atlassian / [CC BY]*
