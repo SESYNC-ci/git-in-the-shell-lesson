@@ -9,9 +9,12 @@ more.
 
 ===
 
-The software has no GUI of it's own, and works through commands always beginning with "git " given in the shell. The comamnd to turn the "current folder" into a git repo is:
+The software has no GUI of its own, and works through commands always beginning with `git` given in the shell. 
+For example, the command to turn the "current folder" into a git repo is `git init`.
+You would run `git init` locally from an existing folder containing project code.
 
 ~~~bash
+cd <path to directory>
 git init
 ~~~
 {:.input title="Terminal"}
@@ -21,10 +24,13 @@ git init
 Add files to git's watchlist with the "add" command. This action is also known as "staging" files.
 
 ~~~bash
-git add <path>
+git add <path to files>
 git status
 ~~~
 {:.input title="Terminal"}
+
+You can stage all files that have been modified since the last commit with `git add .`.
+{:.notes}
 
 ===
 
@@ -50,6 +56,10 @@ Omit --global to set the identity only in this repository.
 fatal: empty ident name (for <(null)>) not allowed
 ~~~
 {:.output style="display: block;"}
+
+The above error message appears if you have not yet configured your local machine with
+your GitHub user credentials.
+{:.notes}
 
 ===
 
