@@ -54,8 +54,9 @@ Writing objects: <progress>
 <stats>
 remote: Resolving deltas: <progress>
 To 'https://github.com/<username>/<repo>.git'
-   <sha>..<sha>  master -> master
-Branch 'master' set up to track remote branch 'master' from 'origin'.Counting objects: <progress>
+   <sha>..<sha>  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+Counting objects: <progress>
 ~~~
 {:.output}
 
@@ -65,7 +66,7 @@ Take a look at the repository on GitHub.
 
 - There is a space for files
 - There is a suggestion to create a `README.md`, a project summary in Markdown.
-- You are looking at a branch called "master".
+- You are looking at a branch called **main**.
 - The commit history is available from the top bar.
 - The "Clone or download" button provides a URL.
 

@@ -3,7 +3,7 @@
 
 ## A Plug for Reproducible Research
 
-Reproducibility is a core tenent of the scientific method. Experiments are
+Reproducibility is a core tenet of the scientific method. Experiments are
 reported in sufficient detail for a skilled practitioner to duplicate the result.
 
 The principle applies equally to modeling, analysis, and perhaps most

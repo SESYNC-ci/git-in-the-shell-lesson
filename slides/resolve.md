@@ -48,7 +48,7 @@ with `>>>>>>>`.
 {:.notes}
 
 ~~~markdown
-<<<<<<< HEAD:master
+<<<<<<< HEAD:main
  ...
 =======
  ...

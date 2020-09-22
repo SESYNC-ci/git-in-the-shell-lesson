@@ -9,6 +9,28 @@ more.
 
 ===
 
+### An initial note on configuration
+
+As of October 1, 2020, all new repositories on GitHub will have a default branch
+called `main`. Previously, the default name was `master`. We have updated the
+behavior of git and GitLab on SESYNC servers to conform with this change, which was
+made to promote inclusion in the version control world. So, if you are doing this
+lesson on the RStudio server or another SESYNC server, no action is needed.
+{:.notes}
+
+If you are doing this lesson on your local machine, we recommend setting the
+default branch name for new repositories you create to `main`. Enter the
+following into your terminal prompt. 
+
+~~~bash
+git config --global init.defaultBranch main
+~~~
+{:.input title="Terminal"}
+
+This option is available for git version 2.28 or later.
+
+===
+
 The software has no GUI of its own, and works through commands always beginning with `git` given in the shell. 
 For example, the command to turn the "current folder" into a git repo is `git init`.
 You would run `git init` locally from an existing folder containing project code.
@@ -144,7 +166,7 @@ git revert --no-edit <sha>
 ~~~
 {:.input title="Terminal"}
 ~~~
-[master <sha>] Revert <message>
+[main <sha>] Revert <message>
  1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
 {:.output style="display: block;"}
