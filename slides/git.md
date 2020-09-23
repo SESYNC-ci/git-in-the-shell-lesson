@@ -15,7 +15,9 @@ As of October 1, 2020, all new repositories on GitHub will have a default branch
 called `main`. Previously, the default name was `master`. We have updated the
 behavior of git and GitLab on SESYNC servers to conform with this change, which was
 made to promote inclusion in the version control world. So, if you are doing this
-lesson on the RStudio server or another SESYNC server, no action is needed.
+lesson on the RStudio server or another SESYNC server, no action is needed. 
+However, you should be aware that any documentation, tutorial, or StackOverflow
+post written before 2020 will assume your default branch is called `master`. 
 {:.notes}
 
 If you are doing this lesson on your local machine, we recommend setting the
