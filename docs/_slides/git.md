@@ -9,6 +9,30 @@ more.
 
 ===
 
+### Note on terminology and configuration
+
+As of October 1, 2020, all new repositories created on GitHub will have a default branch
+called `main`. Previously, the default name was `master`. The change was
+made to promote inclusive language in the version control world. SESYNC is planning to update 
+the GitLab server to match this new default. However, the git client will still
+default to `master` if you create a repository locally, unless you configure it as
+described below.
+You should also be aware that any documentation, tutorial, or StackOverflow
+post written before 2020 will assume your default branch is called `master`. 
+{:.notes}
+
+We recommend setting the default branch name for new repositories you create 
+locally to `main`. Enter the following into your terminal prompt. 
+
+~~~bash
+git config --global init.defaultBranch main
+~~~
+{:.input title="Terminal"}
+
+This option is available for git version 2.28 or later.
+
+===
+
 The software has no GUI of its own, and works through commands always beginning with `git` given in the shell. 
 For example, the command to turn the "current folder" into a git repo is `git init`.
 You would run `git init` locally from an existing folder containing project code.
@@ -144,7 +168,7 @@ git revert --no-edit <sha>
 ~~~
 {:.input title="Terminal"}
 ~~~
-[master <sha>] Revert <message>
+[main <sha>] Revert <message>
  1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
 {:.output style="display: block;"}

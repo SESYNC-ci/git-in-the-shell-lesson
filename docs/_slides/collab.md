@@ -52,7 +52,7 @@ git commit -m 'just me so far!'
 
 ## Push
 
-Look at the `git status` and notice that your branch is ahead of origin/master! Push those commit(s) to your GitHub repo.
+Look at the `git status` and notice that your branch is ahead of origin/main! Push those commit(s) to your GitHub repo.
 
 ===
 

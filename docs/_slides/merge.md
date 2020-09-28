@@ -14,7 +14,7 @@ git commit -m 'feel the learn'
 {:.input title="Terminal"}
 
 ~~~
-[master <sha>] feel the learn
+[main <sha>] feel the learn
  5 files changed, 955 insertions(+)
 ~~~
 {:.output}
@@ -40,7 +40,7 @@ git push
 
 ~~~
 To https://github.com/<username>/<repo>.git
- ! [rejected]        master -> master (fetch first)
+ ! [rejected]        main -> main (fetch first)
  error: failed to push some refs to 'https://github.com/<username>/<repo>.git'
  hint: Updates were rejected because the remote contains work that you do
  hint: not have locally. This is usually caused by another repository pushing
@@ -73,7 +73,7 @@ remote: Compressing objects: <progress>
 remote: <stats>
 Unpacking objects: <progress>
 From https://github.com/<username>/<repo>
-   <sha>..<sha>  master     -> origin/master
+   <sha>..<sha>  main     -> origin/main
    Auto-merging README.md
    Merge made by the 'recursive' strategy.
     README.md | 1 +

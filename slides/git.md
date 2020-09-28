@@ -9,20 +9,20 @@ more.
 
 ===
 
-### An initial note on configuration
+### Note on terminology and configuration
 
-As of October 1, 2020, all new repositories on GitHub will have a default branch
-called `main`. Previously, the default name was `master`. We have updated the
-behavior of git and GitLab on SESYNC servers to conform with this change, which was
-made to promote inclusion in the version control world. So, if you are doing this
-lesson on the RStudio server or another SESYNC server, no action is needed. 
-However, you should be aware that any documentation, tutorial, or StackOverflow
+As of October 1, 2020, all new repositories created on GitHub will have a default branch
+called `main`. Previously, the default name was `master`. The change was
+made to promote inclusive language in the version control world. SESYNC is planning to update 
+the GitLab server to match this new default. However, the git client will still
+default to `master` if you create a repository locally, unless you configure it as
+described below.
+You should also be aware that any documentation, tutorial, or StackOverflow
 post written before 2020 will assume your default branch is called `master`. 
 {:.notes}
 
-If you are doing this lesson on your local machine, we recommend setting the
-default branch name for new repositories you create to `main`. Enter the
-following into your terminal prompt. 
+We recommend setting the default branch name for new repositories you create 
+locally to `main`. Enter the following into your terminal prompt. 
 
 ~~~bash
 git config --global init.defaultBranch main

@@ -7,7 +7,6 @@ editor_options:
 # Git in the Shell
 
 ```{bash}
-# This is only needed if you are doing this lesson on your local machine.
 git config global init.defaultBranch main
 ```
 
