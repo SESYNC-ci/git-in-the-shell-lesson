@@ -12,7 +12,7 @@ more.
 ### Note on terminology and configuration
 
 As of October 1, 2020, all new repositories created on GitHub will have a default branch
-called `main`. Previously, the default name was `master`. The change was
+called `main`. Previously, the default name was `master`. The [change](https://github.com/github/renaming) was
 made to promote inclusive language in the version control world. SESYNC is planning to update 
 the GitLab server to match this new default. However, the git client will still
 default to `master` if you create a repository locally, unless you configure it as
