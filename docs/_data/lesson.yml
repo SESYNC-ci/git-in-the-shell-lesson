@@ -1,8 +1,8 @@
 title: Git and the Centralized Workflow
 handouts:
 #  - worksheet.ipynb
-#  - worksheet.Rmd
-tag: v0.2
+  - worksheet.Rmd
+tag: v0.3
 lesson: 3
 instructor: Ian Carroll
 authors:
