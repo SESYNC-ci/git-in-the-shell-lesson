@@ -7,6 +7,15 @@ The namesake of GitHub is the command-line utility `git`. It performs
 the clone, push, pull, and merge procedures just mentioned, and many
 more.
 
+When using `git` from the command line, you issue commands through
+the Unix shell. These commands have their own special syntax. 
+If you aren't familiar with Unix shell commands, you might want to 
+look at [this lesson from Software Carpentry](https://swcarpentry.github.io/shell-novice/).
+Or check out [explainshell.com](https://explainshell.com/), which is a
+handy tool that gives you the help text associated with specific shell
+commands, including `git` commands.
+{:.notes}
+
 ===
 
 ### Note on terminology and configuration
