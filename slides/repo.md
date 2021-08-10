@@ -19,7 +19,7 @@ a password manager such as [LastPass](https://www.lastpass.com).
 
 ===
 
-3. Create a new repository on your GitHub page.
+3\. Create a new repository on your GitHub page.
 
 ===
 
