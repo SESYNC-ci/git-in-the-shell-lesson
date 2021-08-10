@@ -5,7 +5,21 @@
 
 1. Sign in or create a GitHub account.
 
-2. Create a new repository on your GitHub page.
+2. Create a [personal access token][pat].
+
+**IMPORTANT**: As of August 2021, a personal access token is now required to authenticate
+pushing to a remote repo. The link above is to a GitHub documentation page
+with very detailed instructions on how to navigate to the settings page where
+you can generate a token. When you are prompted to select the scopes 
+(permissions) to give the token, check the box marked `repo`.
+After you generate the token, save it in a safe 
+place; you will need it in a moment. The best place to save it long-term is 
+a password manager such as [LastPass](https://www.lastpass.com).
+{:.notes}
+
+===
+
+3. Create a new repository on your GitHub page.
 
 ===
 
@@ -39,6 +53,12 @@ git remote add origin <URL>
 ===
 
 Push your commit up to the **origin**.
+
+**IMPORTANT**: When you are prompted to enter your password, **paste your personal access token** 
+into the prompt, *not* the password that you use to sign in to GitHub.com in your browser. 
+On Windows you will need to use `Shift`+`Insert` or right-click to paste, because `Ctrl`+`V` 
+will not work in a terminal window.
+{:.notes}
 
 ~~~
 git push
@@ -89,3 +109,4 @@ Create a new file called "README.md" and add the following content on separate l
 
 As you go, utilize the Preview tab to see the result of rendering your Markdown to HTML.
 
+[pat]: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
