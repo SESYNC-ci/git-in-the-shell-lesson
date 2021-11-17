@@ -1,4 +1,5 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-beta-blue.svg)](https://github.com/SESYNC-ci/sesync-ci.github.io/blob/master/lesson/lesson-lifecycle.md#beta)
+[![DOI](https://zenodo.org/badge/117973762.svg)](https://zenodo.org/badge/latestdoi/117973762)
 
 ## Git in the Shell Lesson
 
