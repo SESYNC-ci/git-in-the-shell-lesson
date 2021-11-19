@@ -2,12 +2,13 @@ title: Git and the Centralized Workflow
 handouts:
 #  - worksheet.ipynb
   - worksheet.Rmd
-tag: v0.3
+tag: v0.4
 lesson: 3
 instructor: Ian Carroll
 lifecycle: beta # status for lifecycle badge
 badgecolor: blue # color for lifecycle badge
 warning: true # whether to include note about lifecycle status
+doi: 10.5281/zenodo.5708599
 authors:
   - Ian Carroll
   - Quentin Read
